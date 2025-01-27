@@ -13,6 +13,9 @@ body::-webkit-scrollbar {
 body {
     -ms-overflow-style: none;
     scrollbar-width: none;
+    background: url('../assets/images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(8px);
 }
 
 .materialboxed:hover:not(.active) {
@@ -25,11 +28,12 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin: 0 -5px;
 }
 
 .image-container {
     flex: 1 1 30%;
-    margin: 10px;
+    margin: 5px;
 }
 
 .image-container img {
