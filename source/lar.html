@@ -52,6 +52,7 @@
         </div>
 
         <div class="center-align">
+            <button class="btn waves-effect waves-light" id="prev-button">Previous</button>
             <button class="btn waves-effect waves-light" id="next-button">Next</button>
         </div>
     </main>
@@ -84,6 +85,12 @@
             const images = document.querySelectorAll('.image-container img');
             const firstImage = images[0];
             firstImage.parentNode.appendChild(firstImage);
+        });
+
+        document.getElementById('prev-button').addEventListener('click', function() {
+            const images = document.querySelectorAll('.image-container img');
+            const lastImage = images[images.length - 1];
+            lastImage.parentNode.insertBefore(lastImage, images[0]);
         });
     </script>
 </body>
