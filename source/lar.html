@@ -1,61 +1,82 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coleção Lar</title>
+    <title>Coleção Lar.</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="styles.css">
 </head>
 
+<style>
+    * {
+        font-weight: 100 !important;
+    }
+
+    .row .col {
+        padding: 0;
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+    body {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .materialboxed:hover:not(.active) {
+        opacity: 1;
+        filter: brightness(110%);
+        transition-delay:1s;
+    }
+
+</style>
+
 <body>
-    <header class="section white">
+    <div class="section white">
         <div class="left-align">
-            <a href="index.html" class="black-text">
-                <h4 class="header">Voltar ao início</h4>
+            <a href="index.html" style="color: black;">
+                <h4 class="header" style="margin-left: 10px;">Voltar ao início</h4>
             </a>
         </div>
-    </header>
+    </div>
 
-    <main class="section white">
-        <div class="container">
+    <div class="section white">
+        <div class="row container">
             <h2 class="header">Coleção Lar</h2>
             <h5 class="black-text text-darken-3 lighten-2">Nosso lar é composto de pequenos detalhes que nos trazem
-                conforto, captura-los é uma forma de se conectar com aquilo que nos faz se sentir bem e se sentir
+                conforto,
+                captura-los é uma forma de se conectar com aquilo que nos faz se sentir bem e se sentir
                 verdadeiramente em casa.</h5>
         </div>
+    </div>
 
-        <div class="image-row">
-            <div class="image-container">
-                <img class="materialboxed" src="../assets/images/page1/calendoscópio.jpg" alt="Calendoscópio">
-            </div>
-            <div class="image-container">
-                <img class="materialboxed" src="../assets/images/page1/pole-dance.jpg" alt="Pole Dance">
-            </div>
-            <div class="image-container">
-                <img class="materialboxed" src="../assets/images/page1/reflexo.jpg" alt="Reflexo">
-            </div>
-        </div>
 
-        <div class="image-row">
-            <div class="image-container">
-                <img class="materialboxed" src="../assets/images/page1/toalha.jpg" alt="Toalha">
-            </div>
-            <div class="image-container">
-                <img class="materialboxed" src="../assets/images/page1/neon.jpg" alt="Neon">
-            </div>
-            <div class="image-container">
-                <img class="materialboxed" src="../assets/images/page1/bolsa.jpg" alt="Bolsa">
-            </div>
+    <div class="row">
+        <div class="col s4">
+            <img class="materialboxed" style="width: 177.85%;" src="../assets/images/page1/calendoscópio.jpg">
         </div>
+        <div class="col s4">
+            <img class="materialboxed" style="width: 100%;" src="../assets/images/page1/pole-dance.jpg">
+        </div>
+        <div class="col s4">
+            <img class="materialboxed" style="width: 100%;" src="../assets/images/page1/reflexo.jpg">
+        </div>
+    </div>
 
-        <div class="center-align">
-            <button class="btn waves-effect waves-light" id="prev-button">Previous</button>
-            <button class="btn waves-effect waves-light" id="next-button">Next</button>
+    <div class="row">
+        <div class="col s4">
+            <img class="materialboxed" style="width: 100%;" src="../assets/images/page1/toalha.jpg">
         </div>
-    </main>
+        <div class="col s4">
+            <img class="materialboxed" style="width: 100%;" src="../assets/images/page1/neon.jpg">
+        </div>
+        <div class="col s4">
+            <img class="materialboxed" style="width: 100%;" src="../assets/images/page1/bolsa.jpg">
+        </div>
+    </div>
 
     <footer class="page-footer white">
         <div class="container">
@@ -79,20 +100,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
         integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="../source/JavaScript.js"></script>
-    <script>
-        document.getElementById('next-button').addEventListener('click', function() {
-            const images = document.querySelectorAll('.image-container img');
-            const firstImage = images[0];
-            firstImage.parentNode.appendChild(firstImage);
-        });
+    <script type="text/javascript" src="../source/JavaScript.js"></script>
 
-        document.getElementById('prev-button').addEventListener('click', function() {
-            const images = document.querySelectorAll('.image-container img');
-            const lastImage = images[images.length - 1];
-            lastImage.parentNode.insertBefore(lastImage, images[0]);
-        });
-    </script>
 </body>
 
 </html>
